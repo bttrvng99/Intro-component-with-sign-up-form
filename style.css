@@ -58,6 +58,7 @@ main .right-pane .form form input {
   padding: 1rem 0;
   text-indent: 1rem;
   width: 100%;
+  font-weight: 700;
 }
 main .right-pane .form form .claim {
   background-color: hsl(154, 59%, 45%);
@@ -76,6 +77,8 @@ main .right-pane .form form .claim span {
   border: 0;
   border-radius: 5px;
   transform: translateY(-6px);
+  text-transform: uppercase;
+  font-weight: 700;
 }
 main .right-pane .form form .claim span:active {
   transform: translateY(-2px);
