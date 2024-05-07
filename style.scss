@@ -43,8 +43,8 @@ main {
       background-color: $Blue;
       color: white;
       border: 0;
-      border-radius: 5px;
-      padding: 1rem;
+      border-radius: 10px;
+      padding: 1rem 4rem;
       box-shadow: 0 0.5rem 0 hsla(249, 10%, 26%, 25%);
       cursor: pointer;
     }
@@ -52,16 +52,16 @@ main {
     .form {
       margin: 1rem 0;
       background-color: white;
-      padding: 1rem;
+      padding: 2rem;
       display: flex;
       flex-direction: column;
-      border-radius: 5px;
+      border-radius: 10px;
 
       form {
         display: flex;
         flex-direction: column;
         text-align: end;
-        gap: 5px;
+        gap: 15px;
 
         input {
           border: 1px solid $GrayishBlue;
@@ -70,6 +70,7 @@ main {
           text-indent: 1rem;
           width: 100%;
           font-weight: 700;
+          // margin: 5px 0;
 
           &::placeholder {
             color: $GrayishBlue;
@@ -115,6 +116,7 @@ main {
       div {
         margin-top: 1rem;
         color: $GrayishBlue;
+        font-size: small;
 
         a {
           color: $Red;
@@ -135,13 +137,13 @@ span.error {
   color: $Red;
   font-style: italic;
   font-weight: 600;
-  
+
   .active {
     border: 3px solid $Red;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   main {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -158,6 +160,10 @@ span.error {
 
     .right-pane {
       grid-column: 2 / span 1;
+
+      .form {
+        padding: 3rem;
+      }
     }
   }
 }

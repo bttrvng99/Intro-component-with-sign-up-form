@@ -34,24 +34,24 @@ main .right-pane button.buy {
   background-color: hsl(248, 32%, 49%);
   color: white;
   border: 0;
-  border-radius: 5px;
-  padding: 1rem;
+  border-radius: 10px;
+  padding: 1rem 4rem;
   box-shadow: 0 0.5rem 0 hsla(249, 10%, 26%, 0.25);
   cursor: pointer;
 }
 main .right-pane .form {
   margin: 1rem 0;
   background-color: white;
-  padding: 1rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 main .right-pane .form form {
   display: flex;
   flex-direction: column;
   text-align: end;
-  gap: 5px;
+  gap: 15px;
 }
 main .right-pane .form form input {
   border: 1px solid hsl(246, 25%, 77%);
@@ -97,6 +97,7 @@ main .right-pane .form form button span:active {
 main .right-pane .form div {
   margin-top: 1rem;
   color: hsl(246, 25%, 77%);
+  font-size: small;
 }
 main .right-pane .form div a {
   color: hsl(0, 100%, 74%);
@@ -117,7 +118,7 @@ span.error .active {
   border: 3px solid hsl(0, 100%, 74%);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   main {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -133,6 +134,9 @@ span.error .active {
   }
   main .right-pane {
     grid-column: 2/span 1;
+  }
+  main .right-pane .form {
+    padding: 3rem;
   }
 }
 
