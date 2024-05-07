@@ -70,7 +70,6 @@ main {
           text-indent: 1rem;
           width: 100%;
           font-weight: 700;
-          // margin: 5px 0;
 
           &::placeholder {
             color: $GrayishBlue;
@@ -79,6 +78,9 @@ main {
           &.invalid {
             border: 3px solid $Red;
             color: $Red;
+            background-image: url("./images/icon-error.svg");
+            background-repeat: no-repeat;
+            background-position: center right 1rem;
 
             &::placeholder {
               color: $Red;
