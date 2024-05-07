@@ -50,6 +50,7 @@ main .right-pane .form {
 main .right-pane .form form {
   display: flex;
   flex-direction: column;
+  text-align: end;
   gap: 5px;
 }
 main .right-pane .form form input {
@@ -60,7 +61,17 @@ main .right-pane .form form input {
   width: 100%;
   font-weight: 700;
 }
-main .right-pane .form form .claim {
+main .right-pane .form form input::placeholder {
+  color: hsl(246, 25%, 77%);
+}
+main .right-pane .form form input.invalid {
+  border: 3px solid hsl(0, 100%, 74%);
+  color: hsl(0, 100%, 74%);
+}
+main .right-pane .form form input.invalid::placeholder {
+  color: hsl(0, 100%, 74%);
+}
+main .right-pane .form form button {
   background-color: hsl(154, 59%, 45%);
   color: white;
   border: 0;
@@ -70,7 +81,7 @@ main .right-pane .form form .claim {
   padding: 0;
   cursor: pointer;
 }
-main .right-pane .form form .claim span {
+main .right-pane .form form button span {
   background: hsl(154, 59%, 51%);
   display: block;
   padding: 1rem;
@@ -80,7 +91,7 @@ main .right-pane .form form .claim span {
   text-transform: uppercase;
   font-weight: 700;
 }
-main .right-pane .form form .claim span:active {
+main .right-pane .form form button span:active {
   transform: translateY(-2px);
 }
 main .right-pane .form div {
@@ -95,6 +106,15 @@ main .right-pane .form div a {
 main .right-pane span {
   align-self: center;
   text-align: center;
+}
+
+span.error {
+  color: hsl(0, 100%, 74%);
+  font-style: italic;
+  font-weight: 600;
+}
+span.error .active {
+  border: 3px solid hsl(0, 100%, 74%);
 }
 
 @media (min-width: 768px) {

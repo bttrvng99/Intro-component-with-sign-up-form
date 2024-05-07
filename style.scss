@@ -60,9 +60,9 @@ main {
       form {
         display: flex;
         flex-direction: column;
-        // justify-content: center;
-        // align-items: center;
+        text-align: end;
         gap: 5px;
+
         input {
           border: 1px solid $GrayishBlue;
           border-radius: 5px;
@@ -70,9 +70,22 @@ main {
           text-indent: 1rem;
           width: 100%;
           font-weight: 700;
+
+          &::placeholder {
+            color: $GrayishBlue;
+          }
+
+          &.invalid {
+            border: 3px solid $Red;
+            color: $Red;
+
+            &::placeholder {
+              color: $Red;
+            }
+          }
         }
 
-        .claim {
+        button {
           background-color: hsl(154, 59%, 45%);
           color: white;
           border: 0;
@@ -115,6 +128,16 @@ main {
       align-self: center;
       text-align: center;
     }
+  }
+}
+
+span.error {
+  color: $Red;
+  font-style: italic;
+  font-weight: 600;
+  
+  .active {
+    border: 3px solid $Red;
   }
 }
 
